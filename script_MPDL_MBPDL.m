@@ -24,11 +24,11 @@ for i = 1:length(onset_intervals)
     TC(:, i) = generate_TC(onsets, durations(i), N);
 end
 
-% Uncomment the following if additional operations are needed
-hrf = spm_hrf(RT);
-R  = [TC(1,2) zeros(1,length(hrf)-1)];
+
+% hrf = spm_hrf(RT);
+% R  = [TC(1,2) zeros(1,length(hrf)-1)];
 for i = 1:size(TC, 2)
-    TC(:, i) = zscore(toeplitz(TC(:, i), R)*hrf); % Apply HRF and toeplitz structure if needed
+%     TC(:, i) = zscore(toeplitz(TC(:, i), R)*hrf); % Apply HRF and toeplitz structure if needed
     TC(:, i) = zscore(TC(:, i) + 0.005 * wfbm(1, N)'); % Add fractional Brownian motion if needed
 end
 
