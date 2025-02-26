@@ -4,4 +4,8 @@ The main script, `script_MPDL_MBPDL.m`, implements the MPDL and MBPDL algorithms
 
 Alternatively, if you prefer not to use the convolution with the `spm_hrf` function, the code can execute using basic box stimuli. This approach is currently utilized in the script and differs from the method described in the paper, where HRF convolution is applied. This modification allows the code to be run without additional dependencies, suitable for preliminary tests or environments where SPM12 is not installed.
 
+### Requirements for Running Online Dictionary Learning (ODL)
 
+To execute the Online Dictionary Learning (ODL) as described in the paper, it is necessary to download and install the SPAMS toolbox. The SPAMS toolbox can be downloaded from [SPAMS's official website](http://spams-devel.gforge.inria.fr/downloads.html).
+
+Alternatively, if you prefer not to use SPAMS, we have incorporated a custom Lasso function into the ODL implementation. This adaptation allows the ODL code to be executed without the SPAMS toolbox, providing flexibility for environments where installing SPAMS may not be feasible. The modified code with the custom Lasso function is available for download on our GitHub repository.
