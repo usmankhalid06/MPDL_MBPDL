@@ -120,18 +120,18 @@ PSF_sim4 = abs(PSF_sim4);
 for jjj=1:size(PSF_sim4,1)
     PSF_sim4(jjj,:) =(PSF_sim4(jjj,:) - min(PSF_sim4(jjj,:))) / ( max(PSF_sim4(jjj,:)) - min(PSF_sim4(jjj,:)) );
 end
-SM = abs(SM); 
-for jjj=1:size(SM,1)
-    SM(jjj,:) =(SM(jjj,:) - min(SM(jjj,:))) / ( max(SM(jjj,:)) - min(SM(jjj,:)) );
+SM2 = abs(SM); 
+for jjj=1:size(SM2,1)
+    SM2(jjj,:) =(SM2(jjj,:) - min(SM2(jjj,:))) / ( max(SM2(jjj,:)) - min(SM2(jjj,:)) );
 end
 f = 4; % asuming only first 3 sources are known
 l1 = 5;
 l2 = 18;
 l3 = 30;
 l4 = 90;
-TC =  TC*diag(1./sqrt(sum(TC.*TC))); 
+TC2 =  TC*diag(1./sqrt(sum(TC.*TC))); 
 spa = 100;
-[D{5},X{5}, E5,C5]= my_MBPDL(Y,[TC(:,1:4) Dp(:,1:150)],[SM(1:4,:); PSF_sim4],K,spa,l1,l2,l3,l4,nIter,f,TC,SM); % and 2 %=
+[D{5},X{5}, E5,C5]= my_MBPDL(Y,[TC2(:,1:4) Dp(:,1:150)],[SM2(1:4,:); PSF_sim4],K,spa,l1,l2,l3,l4,nIter,f,TC,SM); % and 2 %=
 tEnd(1,2) = toc(tStart)
 % figure; plot(E5)
 % figure; plot(C5)
