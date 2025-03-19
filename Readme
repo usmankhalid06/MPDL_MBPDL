@@ -1,4 +1,4 @@
-### MATLAB Code for MPDL and MBPDL
+### MATLAB Code for MPDL and MBPDL for the paper submitted to ASIP 2025
 
 The main script, `script_MPDL_MBPDL.m`, implements the MPDL and MBPDL algorithms. To run this code correctly with the hemodynamic response function (HRF), you must download and add SPM12 to your MATLAB path. You can obtain SPM12 from [SPM's official website](http://www.fil.ion.ucl.ac.uk/spm/software/spm12/).
 
