@@ -6,6 +6,6 @@ Alternatively, if you prefer not to use the convolution with the `spm_hrf` funct
 
 ### Requirements for Running Online Dictionary Learning (ODL)
 
-To execute the Online Dictionary Learning (ODL) as described in the paper, it is necessary to download and install the SPAMS toolbox. The SPAMS toolbox can be downloaded from [SPAMS's official website](http://spams-devel.gforge.inria.fr/downloads.html).
+To execute the ODL as described in the paper, it is necessary to download and install the SPAMS toolbox. The SPAMS toolbox can be downloaded from [SPAMS's official website](http://spams-devel.gforge.inria.fr/downloads.html).
 
 Alternatively, if you prefer not to use SPAMS, we have incorporated a custom Lasso function into the ODL implementation. This adaptation allows the ODL code to be executed without the SPAMS toolbox, providing flexibility for environments where installing SPAMS may not be feasible. The modified code with the custom Lasso function is available for download on our GitHub repository.
