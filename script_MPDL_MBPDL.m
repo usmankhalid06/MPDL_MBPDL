@@ -160,7 +160,7 @@ for i =1:nA-1
         TP(i,jjj) = TP(i,jjj) +sum(abs(SM_gw4(jjj,:))>=thr & abs(XX{i}(indd(jjj),:))>=thr);
         FP(i,jjj) = FP(i,jjj) +sum(abs(SM_gw4(jjj,:))<=thr & abs(XX{i}(indd(jjj),:))>=thr);
         FN(i,jjj) = FN(i,jjj) +sum(abs(SM_gw4(jjj,:))>=thr & abs(XX{i}(indd(jjj),:))<=thr); 
-        Fscore(i,jjj) = (2*sum(TP(i,jjj)))/(2*sum(TP(i,jjj))+sum(FP(i,:))+sum(FN(i,jjj)));
+        Fscore(i,jjj) = (2*sum(TP(i,jjj)))/(2*sum(TP(i,jjj))+sum(FP(i,jjj))+sum(FN(i,jjj)));
     end
 %     F_score(i) = (2*sum(TP(i,:)))/(2*sum(TP(i,:))+sum(FP(i,:))+sum(FN(i,:)));
 end
